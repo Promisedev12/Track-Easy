@@ -32,8 +32,11 @@
                 <li><a href="/admin/orders">Orders</a></li>
                 <li><a href="/admin/orders/create">Create Order</a></li>
                 <li><a href="/admin/orders/track">Tracking</a></li>
-
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/admin/settings">Account Settings</a></li>
+                <li><button form="logout">Logout</button></li>
+                <form action="/logout" id="logout" method="POST">
+                    @csrf
+                </form>
             </ul>
             <div class="theme-toggle">
                 <label class="switch">
@@ -50,7 +53,7 @@
                 <button id="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h2>Welcome, Admin!</h2>
+                <h2>Welcome {{ Auth::user()->name }}</h2>
             </header>
 
             <div class="content">
@@ -63,12 +66,12 @@
                                 @csrf
                                 @method('PATCH')
                                 <div class="input-group mb-3">
-                                    <input required type="text" value="{{ old('name') }}" placeholder="name"
+                                    <input required type="text" value="{{ Auth::user()->name }}" placeholder="name"
                                         class="form-control" name="name" />
                                 </div>
                                 <x-form-error name="name"></x-form-error>
                                 <div class="input-group mb-3">
-                                    <input required type="email" value="{{ old('email') }}" placeholder="email"
+                                    <input required type="email" value="{{ Auth::user()->email }}" placeholder="email"
                                         class="form-control" name="email" />
                                 </div>
                                 <x-form-error name="email"></x-form-error>

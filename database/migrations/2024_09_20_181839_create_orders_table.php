@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('items');
             $table->string('totalWeight');
             $table->string('Destination');
+            $table->string('CurrentLocation');
+            $table->string('departureLocation');
             $table->date('depatureDate');
             $table->date('arivalDate');
             $table->string('customerName');

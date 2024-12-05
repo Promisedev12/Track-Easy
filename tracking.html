@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="stylesheet" href="./create-style.css" />
+    <link rel="stylesheet" href="./order.css" />
+  </head>
+  <body>
+    <div class="containers">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Admin Panel</h3>
+          <button class="menu-close">
+            <i class="fas fa-x"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="./create-order.html">Create Order</a></li>
+          <li><a href="./tracking.html">Tracking</a></li>
+
+          <li><a href="#logout">Logout</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="themeSwitch" />
+            <span class="slider"></span>
+          </label>
+          <span id="modeText">Light Mode</span>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main-content">
+        <header>
+          <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h2>Welcome, Admin!</h2>
+        </header>
+        <div class="content">
+          <section class="sort">
+            <div class="inputs-group" style="width: 100%">
+              <p class="label">Enter Tracking number</p>
+              <div style="display: flex; align-items: center">
+                <input
+                  type="text"
+                  class="input"
+                  name="date"
+                  placeholder="Tracking Nujmber"
+                />
+                <button class="btn btn-primary m-2">Track</button>
+              </div>
+            </div>
+          </section>
+          <div class="row">
+            <div class="col-12"></div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Tracking Number <span class="login-danger">*</span></label
+                >
+                <h2>#124483o</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Name <span class="login-danger">*</span></label
+                >
+                <h2>Car delivery</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Number of items <span class="login-danger">*</span></label
+                >
+                <h2>3</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Items <span class="login-danger">*</span></label
+                >
+                <h2>1 G-wagon, 1 lexus</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms calendar-icon">
+                <label class="text-primary"
+                  >Total Weight<span class="login-danger">*</span></label
+                >
+                <h2>1000kg</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary">Destination </label>
+                <h2>Douala Cameroon</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Departure Date <span class="login-danger">*</span></label
+                >
+                <h2>15/11/2024</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Arival date<span class="login-danger">*</span></label
+                >
+                <h2>01/01/2025</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Status<span class="login-danger">*</span></label
+                >
+                <h2>Delivered</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Customer Name <span class="login-danger">*</span></label
+                >
+                <h2>Jhon Deo</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Customer Email<span class="login-danger">*</span></label
+                >
+                <h2>JhonDeo@gmail.com</h2>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary"
+                  >Customer Location<span class="login-danger">*</span></label
+                >
+                <h2>Douala Bonaberie</h2>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-4 my-3">
+              <div class="input-block local-forms">
+                <label class="text-primary">Customer Phone Number</label>
+                <h2>+237 653 95 08 53</h2>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="student-submit">
+                <button
+                  type="submit"
+                  name="submit"
+                  class="btn btn-primary btn-lg"
+                >
+                  Edite
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

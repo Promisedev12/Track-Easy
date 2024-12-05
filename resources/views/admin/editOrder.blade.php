@@ -102,6 +102,22 @@
                         </div>
                         <div class="col-12 col-sm-4 my-2">
                             <div class="input-block local-forms">
+                                <label>Departure Location </label>
+                                <input name="departLocation" value="{{ $order['departureLocation'] }}"
+                                    class="form-control" type="text" placeholder="USA / Los Angelas" />
+                                <x-form-error name='departLocation'></x-form-error>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 my-2">
+                            <div class="input-block local-forms">
+                                <label>Current Location </label>
+                                <input name="currentLocation" value="{{ $order['CurrentLocation'] }}"
+                                    class="form-control" type="text" placeholder="South Africa / Cape Town" />
+                                <x-form-error name='currentLocation'></x-form-error>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 my-2">
+                            <div class="input-block local-forms">
                                 <label>Destination </label>
                                 <input value="{{ $order['Destination'] }}" name="destination" class="form-control"
                                     type="text" placeholder="Cmeroon / Douala" />

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="stylesheet" href="./create-style.css" />
+  </head>
+  <body>
+    <div class="containers">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Admin Panel</h3>
+          <button class="menu-close">
+            <i class="fas fa-x"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="./create-order.html">Create Order</a></li>
+          <li><a href="./tracking.html">Tracking</a></li>
+
+          <li><a href="#logout">Logout</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="themeSwitch" />
+            <span class="slider"></span>
+          </label>
+          <span id="modeText">Light Mode</span>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main-content">
+        <header>
+          <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h2>Welcome, Admin!</h2>
+        </header>
+        <div class="content">
+          <form
+            method="post"
+            action="proces-add-student.php"
+            enctype="multipart/form-data"
+          >
+            <div class="row">
+              <div class="col-12">
+                <h5 class="student-info">
+                  Create Order
+                  <span
+                    ><a href="javascript:;"
+                      ><i class="feather-more-vertical"></i></a
+                  ></span>
+                </h5>
+              </div>
+
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label>Name <span class="login-danger">*</span></label>
+                  <input
+                    name="name"
+                    class="form-control"
+                    type="text"
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label
+                    >Number of items <span class="login-danger">*</span></label
+                  >
+                  <input
+                    name="Num_items"
+                    class="form-control"
+                    type="number"
+                    placeholder="5"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label>Items <span class="login-danger">*</span></label>
+                  <input
+                    name="items"
+                    class="form-control"
+                    type="text"
+                    placeholder="1 Fridge, 3 TV etc"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms calendar-icon">
+                  <label>Total Weight<span class="login-danger">*</span></label>
+                  <input
+                    name="weight"
+                    class="form-control datetimepicker"
+                    type="text"
+                    placeholder="10kg"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label>Destination </label>
+                  <input
+                    name="destination"
+                    class="form-control"
+                    type="text"
+                    placeholder="Cmeroon / Douala"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label
+                    >Departure Date <span class="login-danger">*</span></label
+                  >
+                  <input name="depart-date" class="form-control" type="date" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label>Arival date<span class="login-danger">*</span></label>
+                  <input name="arive-date" class="form-control" type="date" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label
+                    >Customer Name <span class="login-danger">*</span></label
+                  >
+                  <input
+                    name="cusName"
+                    class="form-control"
+                    type="text"
+                    placeholder="Jhon Deo"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label
+                    >Customer Email<span class="login-danger">*</span></label
+                  >
+                  <input
+                    name="cusEmail"
+                    class="form-control"
+                    type="email"
+                    placeholder="JhonDeo@gmail.com"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label
+                    >Customer Location<span class="login-danger">*</span></label
+                  >
+                  <input
+                    name="cusLocation"
+                    class="form-control"
+                    type="text"
+                    placeholder="Douala Bonaberie"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-4 my-2">
+                <div class="input-block local-forms">
+                  <label>Customer Phone Number</label>
+                  <input
+                    name="CusphoneNum"
+                    class="form-control"
+                    type="number"
+                    placeholder="Enter Phone Number"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="student-submit">
+                  <button
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary btn-lg"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -78,7 +78,7 @@
                     @csrf
                 </form>
                 <div class="row ">
-                    <h2 class="text-danger">No item found with this trackin number please check it again and ensure its
+                    <h2 class="text-danger">No item found with this tracking number please check it again and ensure its
                         correct</h2>
                 </div>
 

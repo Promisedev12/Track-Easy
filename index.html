@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+    <!-- <link rel="stylesheet" href="./create-style.css" /> -->
+  </head>
+  <body>
+    <div class="containers">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Admin Panel</h3>
+          <button class="menu-close">
+            <i class="fas fa-x"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="./create-order.html">Create Order</a></li>
+          <li><a href="./tracking.html">Tracking</a></li>
+
+          <li><a href="#logout">Logout</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="themeSwitch" />
+            <span class="slider"></span>
+          </label>
+          <span id="modeText">Light Mode</span>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main-content">
+        <header>
+          <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h2>Welcome, Admin! <i class="fas fa-home"></i></h2>
+        </header>
+        <div class="content">
+          <section id="dashboard">
+            <!-- <h3>Dashboard Overview</h3> -->
+            <div class="grid-container">
+              <div class="card">
+                <h3>Total Orders</h3>
+                <p>123</p>
+              </div>
+              <div class="card">
+                <h3>In Transit</h3>
+                <p>45</p>
+              </div>
+              <div class="card">
+                <h3>Pending orders</h3>
+                <p>45</p>
+              </div>
+              <div class="card">
+                <h3>Delivered</h3>
+                <p>45</p>
+              </div>
+            </div>
+          </section>
+          <section id="orders">
+            <h3>To be delivered Today</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Tracking Number</th>
+                  <th>Product Name</th>
+                  <th>Quantity</th>
+
+                  <th>Location</th>
+                  <th>Customer Name</th>
+                  <th>Customer Number</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#123456789</td>
+                  <td>Car</td>
+                  <td>2</td>
+                  <td>New York</td>
+                  <td>Achu Promise</td>
+                  <td>65395085</td>
+                  <td>
+                    <a class="btn btn-sm" href=""
+                      ><i
+                        class="fa-solid action text-primary mx-3 fa-pen-to-square"
+                      ></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#123456789</td>
+                  <td>Car</td>
+                  <td>2</td>
+                  <td>New York</td>
+                  <td>Achu Promise</td>
+                  <td>65395085</td>
+                  <td>
+                    <a class="btn btn-sm" href=""
+                      ><i
+                        class="fa-solid action text-primary mx-3 fa-pen-to-square"
+                      ></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#123456789</td>
+                  <td>Car</td>
+                  <td>2</td>
+                  <td>New York</td>
+                  <td>Achu Promise</td>
+                  <td>65395085</td>
+                  <td>
+                    <a class="btn btn-sm" href=""
+                      ><i
+                        class="fa-solid action text-primary mx-3 fa-pen-to-square"
+                      ></i>
+                    </a>
+                  </td>
+                </tr>
+                <!-- More rows can be added here -->
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

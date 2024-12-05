@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="stylesheet" href="./create-style.css" />
+    <link rel="stylesheet" href="./order.css" />
+  </head>
+  <body>
+    <div class="containers">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Admin Panel</h3>
+          <button class="menu-close">
+            <i class="fas fa-x"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="./create-order.html">Create Order</a></li>
+          <li><a href="./tracking.html">Tracking</a></li>
+
+          <li><a href="#logout">Logout</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="themeSwitch" />
+            <span class="slider"></span>
+          </label>
+          <span id="modeText">Light Mode</span>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main-content">
+        <header>
+          <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h2>Welcome, Admin!</h2>
+        </header>
+        <div class="content">
+          <h2>Sort by</h2>
+          <section class="sort">
+            <div class="inputs-group">
+              <p class="label">Delevery Date</p>
+              <input type="date" class="input" name="date" />
+            </div>
+            <div class="inputs-group">
+              <p class="label">Tracking number</p>
+              <input
+                type="text"
+                class="input"
+                name="date"
+                placeholder="Tracking Nujmber"
+              />
+            </div>
+            <div class="inputs-group">
+              <p class="label">Status</p>
+              <input
+                type="text"
+                class="input"
+                name="date"
+                placeholder="Tracking Nujmber"
+              />
+            </div>
+          </section>
+          <table>
+            <thead>
+              <tr>
+                <th>Tracking Number</th>
+                <th>Items</th>
+                <th>Quantity</th>
+                <th>Destination</th>
+                <th>Total weight</th>
+                <th>Status</th>
+                <th>Arrival date</th>
+                <th>Customer Name</th>
+                <th>Customer Number</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#123456789</td>
+                <td>Car</td>
+                <td>2</td>
+                <td>New York</td>
+                <td>7kg</td>
+                <td>pending</td>
+                <td>25/11/2024</td>
+                <td>Achu Promise</td>
+                <td>65395085</td>
+                <td>
+                  <a class="btn btn-sm" href=""
+                    ><i
+                      class="fa-solid action text-primary mx-3 fa-pen-to-square"
+                    ></i
+                  ></a>
+                  &nbsp;
+                  <a class="btn btn-sm del-btn" href=""
+                    ><i class="fa-solid action text-danger fa-trash"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td>#123456789</td>
+                <td>Car</td>
+                <td>2</td>
+                <td>New York</td>
+                <td>7kg</td>
+                <td>pending</td>
+                <td>25/11/2024</td>
+                <td>Achu Promise</td>
+                <td>65395085</td>
+                <td>
+                  <a class="btn btn-sm" href=""
+                    ><i
+                      class="fa-solid action text-primary mx-3 fa-pen-to-square"
+                    ></i
+                  ></a>
+                  &nbsp;
+                  <a class="btn btn-sm del-btn" href=""
+                    ><i class="fa-solid action text-danger fa-trash"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr>
+                <td>#123456789</td>
+                <td>Car</td>
+                <td>2</td>
+                <td>New York</td>
+                <td>7kg</td>
+                <td>pending</td>
+                <td>25/11/2024</td>
+                <td>Achu Promise</td>
+                <td>65395085</td>
+                <td>
+                  <a class="btn btn-sm" href=""
+                    ><i
+                      class="fa-solid action text-primary mx-3 fa-pen-to-square"
+                    ></i
+                  ></a>
+                  &nbsp;
+                  <a class="btn btn-sm del-btn" href=""
+                    ><i class="fa-solid action text-danger fa-trash"></i
+                  ></a>
+                </td>
+              </tr>
+              <!-- More rows can be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

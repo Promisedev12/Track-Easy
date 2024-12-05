@@ -28,6 +28,8 @@
                     <th>Tracking Number</th>
                     <th>Items</th>
                     <th>Quantity</th>
+                    <th>Departure location</th>
+                    <th>Current location</th>
                     <th>Destination</th>
                     <th>Total weight</th>
                     <th>Status</th>
@@ -45,7 +47,14 @@
                         <td><a class="order-link" href="/admin/orders/{{ $order['id'] }}">{{ $order['name'] }}</a></td>
                         <td><a class="order-link" href="/admin/orders/{{ $order['id'] }}">{{ $order['numItems'] }}</a>
                         </td>
-                        <td><a class="order-link" href="/admin/orders/{{ $order['id'] }}">{{ $order['Destination'] }}</a>
+                        <td><a class="order-link"
+                                href="/admin/orders/{{ $order['id'] }}">{{ $order['departureLocation'] }}</a>
+                        </td>
+                        <td><a class="order-link"
+                                href="/admin/orders/{{ $order['id'] }}">{{ $order['CurrentLocation'] }}</a>
+                        </td>
+                        <td><a class="order-link"
+                                href="/admin/orders/{{ $order['id'] }}">{{ $order['Destination'] }}</a>
                         </td>
                         <td><a class="order-link"
                                 href="/admin/orders/{{ $order['id'] }}">{{ $order['totalWeight'] }}</a></td>
@@ -62,11 +71,13 @@
                                     class="fa-solid action text-primary mx-3 fa-pen-to-square">
                                 </i></a>
                             &nbsp;
-                            <button style="background-color: transparent; border:none" form="delete"
-                                class="btn btn-sm del-btn" href=""><i
-                                    class="fa-solid action text-danger fa-trash" style="color: red"></i></button>
+                            <button style="background-color: transparent; border:none" class="btn btn-sm del-btn"
+                                onclick="confirmDelete(event, '{{ $order['id'] }}')">
+                                <i class="fa-solid action text-danger fa-trash" style="color: red"></i>
+                            </button>
                         </td>
-                        <form method="POST" action="/admin/orders/{{ $order['id'] }}" id="delete">
+                        <form method="POST" action="/admin/orders/{{ $order['id'] }}"
+                            id="delete-{{ $order['id'] }}">
                             @csrf
                             @method('DELETE')
                         </form>
@@ -76,4 +87,20 @@
         </table>
 
     </div>
+
+    <script>
+        function confirmDelete(event, orderId) {
+            // Prevent default button behavior (form submission)
+            event.preventDefault();
+
+            // Display confirmation prompt
+            const userConfirmed = confirm("Are you sure you want to delete this order?");
+
+            if (userConfirmed) {
+                // Submit the form if user confirms
+                document.getElementById(`delete-${orderId}`).submit();
+            }
+            // If canceled, do nothing
+        }
+    </script>
 </x-adminLayout>

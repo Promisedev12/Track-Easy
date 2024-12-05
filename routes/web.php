@@ -97,6 +97,7 @@ Route::get('/admin/orders', function () {
         return redirect('/login');
     }
     $orders = Order::orderBy('updated_at', 'desc')->get();
+
     return view('admin.orders', ['orders' => $orders]);
 });
 
@@ -123,6 +124,8 @@ Route::post('/admin/orders/create', function () {
         'cusEmail' => ['required'],
         'cusLocation' => ['required'],
         'cusphoneNum' => ['required'],
+        'currentLocation' => ['required'],
+        'departLocation' => ['required']
     ]);
 
     function generateTrackingNumber()
@@ -144,6 +147,8 @@ Route::post('/admin/orders/create', function () {
         'items' => request('items'),
         'totalWeight' => request('weight'),
         'Destination' => request('destination'),
+        'CurrentLocation' => request('currentLocation'),
+        'departureLocation' => request('departLocation'),
         'depatureDate' => request('depart-date'),
         'arivalDate' => request('arive-date'),
         'customerName' => request('cusName'),
@@ -199,19 +204,21 @@ Route::patch('/admin/orders/{order}/edite', function (Order $order) {
         return redirect('/login');
     }
     $order->update([
-        'trackinNum' => '202023933',
+        // 'trackinNum' => '202023933',
         'name' => request('name'),
         'numItems' => request('Num_items'),
         'items' => request('items'),
         'totalWeight' => request('weight'),
         'Destination' => request('destination'),
+        'CurrentLocation' => request('currentLocation'),
+        'departureLocation' => request('departLocation'),
         'depatureDate' => request('depart-date'),
         'arivalDate' => request('arive-date'),
         'customerName' => request('cusName'),
         'customerEmail' => request('cusEmail'),
         'customerLocation' => request('cusLocation'),
         'customerPhoneNum' => request('cusphoneNum'),
-        'status' => request('status')
+        'status' => 'pending'
     ]);
     return redirect('admin/orders');
 });
